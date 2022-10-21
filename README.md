@@ -8,6 +8,6 @@ Create new posts by running:
 npm run new --name=post-name
 ```
 
-Then commit post changes and push.
+Edit the newly creates `posts/post-name.md` file, commit post changes and push to github in order to publish it to dev.to using Github actions.
 
-Remember to pull afterward in order to collet all the published post info.
+Remember to pull afterward in order to collet all the returning post info (such as ID publcation date ecc...).
