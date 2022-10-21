@@ -1,0 +1,16 @@
+{
+	"name": "blog",
+	"version": "1.0.0",
+	"description": "[![Build Status](https://github.com/sinedied/devto-github-template/workflows/publish/badge.svg)](https://github.com/sinedied/devto-github-template/actions)",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"new": "dev new posts/$npm_config_name"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@sinedied/devto-cli": "^1.2.1"
+	}
+}
