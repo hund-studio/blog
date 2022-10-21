@@ -9,4 +9,4 @@ published: true
 
 Test article for organization
 
-![image]('assets/image.jpeg')
+![image](./assets/image.jpeg)
