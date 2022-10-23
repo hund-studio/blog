@@ -1,10 +1,12 @@
 ---
 title: Dominate routing in Express
 description: Brief thoughts about routing in express
-tags: ""
-cover_image: ""
+tags: ''
+cover_image: ''
 canonical_url: null
 published: true
+id: 1227809
+date: '2022-10-23T19:40:59Z'
 ---
 
 # Dominate routing in Express
