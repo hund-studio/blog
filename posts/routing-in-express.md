@@ -1,15 +1,13 @@
 ---
 title: Dominate routing in Express
 description: Brief thoughts about routing in express
-tags: ''
-cover_image: ''
+tags: ""
+cover_image: ""
 canonical_url: null
 published: true
 id: 1227809
-date: '2022-10-23T19:40:59Z'
+date: "2022-10-23T19:40:59Z"
 ---
-
-# Dominate routing in Express
 
 When a project starts growing in complexity, you might end up with different routes for API handling, page-serving, webhooks etc...
 
