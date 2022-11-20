@@ -1,12 +1,12 @@
 ---
 title: Array iteration examples
-description: 'How to handle data using map, every, find, filter, reduce, sort, every with real examples'
-tags: ''
-cover_image: ''
+description: "How to handle data using map, every, find, filter, reduce, sort, every with real examples"
+tags: ""
+cover_image: ""
 canonical_url: null
 published: true
 id: 1264754
-date: '2022-11-20T18:52:24Z'
+date: "2022-11-20T18:52:24Z"
 ---
 
 This article tries to examine different real-life use cases which can be solved with `Array` methods.
@@ -269,9 +269,9 @@ return <div className={css(active && "is-active", "round-borders")} />;
 You have an array with 3 numbers `[3, 18, 7, 18`]` which need to be sorted in "ASCending" order.
 The sort method compares values two by two and depending on the value obtained subtracting one from another decide whether:
 
-- `< 0` (3 - 18) = -15 which means keep 3 before 18 => new order `[3, 18, 7, 18]`;
-- `> 0` (18 - 7) = +11 which means exchange 18 with 7 => new order `[3, 7, 18, 18]`;
-- `= 0` (18 - 18) = 0 which means keep the same order => new order `[3, 7, 18, 18]`.
+- `< 0`: (3 - 18) = -15 keep 3 before 18 => new order `[3, 18, 7, 18]`;
+- `> 0`: (18 - 7) = +11 exchange 18 with 7 => new order `[3, 7, 18, 18]`;
+- `= 0`: (18 - 18) = 0 keep the same order => new order `[3, 7, 18, 18]`.
 
 ```typescript
 const numbers = [3, 18, 7];
