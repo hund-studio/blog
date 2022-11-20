@@ -1,12 +1,12 @@
 ---
 title: Array iteration examples
-description: 'How to handle data using map, every, find, filter, reduce, sort, every with real examples'
-tags: ''
-cover_image: ''
+description: "How to handle data using map, every, find, filter, reduce, sort, every with real examples"
+tags: ""
+cover_image: ""
 canonical_url: null
 published: true
 id: 1264754
-date: '2022-11-20T18:52:24Z'
+date: "2022-11-20T18:52:24Z"
 ---
 
 This article tries to examine different real-life use cases which can be solved with `Array` methods.
@@ -266,7 +266,7 @@ return <div className={css(active && "is-active", "round-borders")} />;
 
 > 📄 [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
-You have an array with 3 numbers `[3, 18, 7, 18`]` which need to be sorted in "ASCending" order.
+You have an array with 3 numbers `[3, 18, 7, 18]` which need to be sorted in "ASCending" order.
 The sort method compares values two by two and depending on the value obtained subtracting one from another decide whether:
 
 | Condition |              |                     | New order        |
