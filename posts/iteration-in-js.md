@@ -1,10 +1,10 @@
 ---
 title: Array iteration examples
-description: 'How to handle data using map, every, find, filter, reduce, sort, every with real examples'
-tags: ''
-cover_image: ''
+description: "How to handle data using map, every, find, filter, reduce, sort, every with real examples"
+tags: ""
+cover_image: ""
 canonical_url: null
-published: false
+published: true
 id: 1264754
 ---
 
@@ -13,7 +13,7 @@ For a technical definition of each method, every section has a link to the offic
 
 |       | Table of contents                                 |
 | :---: | :------------------------------------------------ |
-|       | [`map()` ](#map)                                  |
+|       | [`map()`](#map)                                   |
 |       | [`every()`](#every)                               |
 |       | [`find()`](#find)                                 |
 |       | [`filter()`](#filter)                             |
@@ -32,7 +32,7 @@ For a technical definition of each method, every section has a link to the offic
 
 ### Execute the same function on every item of the array
 
-> 👨‍🏫 You have a bunch of data and wants to run the same action on all of them.
+> 👨‍🏫 You have a bunch of data and want to run the same action on all of them.
 
 ```typescript
 const numbers = [1, 2, 3];
@@ -43,27 +43,27 @@ const numbersPlusOne = numbers.map((number) => number + 1);
 // numbersPlusOne: 2, 3, 4
 ```
 
-### Convert an array of configuration options to Class Instances
+### Convert an array of configuration options to Class Instances
 
-> 👨‍🏫 You have an array with different arguments and want to change them into Class Instances.
+> 👨‍🏫 You have an array of different arguments and want to change them into Class Instances.
 
 ```typescript
 const peopleOptions = [
-  {
-    name: "Antonio",
-    age: 13,
-    height: 1.83,
-  },
-  {
-    name: "Federico",
-    age: 54,
-    height: 0.9,
-  },
-  {
-    name: "Ernesto",
-    age: 27,
-    height: 2.2,
-  },
+	{
+		name: "Antonio",
+		age: 13,
+		height: 1.83,
+	},
+	{
+		name: "Federico",
+		age: 54,
+		height: 0.9,
+	},
+	{
+		name: "Ernesto",
+		age: 27,
+		height: 2.2,
+	},
 ];
 
 const people = peopleOptions.map((personOptions) => new Person(personOptions));
@@ -72,7 +72,7 @@ const people = peopleOptions.map((personOptions) => new Person(personOptions));
 // people: 👦, 👩, 👱
 ```
 
-### In React, render a list of wathever object
+### In React, render a list of whatever object
 
 > 👨‍🏫 You want to render some UI elements using React.
 
@@ -82,31 +82,31 @@ const people = peopleOptions.map((personOptions) => new Person(personOptions));
 const list = ["milk", "eggs", "cucumbers"];
 
 return (
-  <ul>
-    {list.map((item, index) => (
-      <li key={index}>{item}</li>
-    ))}
-  </ul>
+	<ul>
+		{list.map((item, index) => (
+			<li key={index}>{item}</li>
+		))}
+	</ul>
 );
 ```
 
 ### Bonus Track: In combination with Promise.all()
 
-In combitaion with `Promise.all()` can be used to wait for multiple `async` operations BUT:
+In combination with `Promise.all()` can be used to wait for multiple `async` operations BUT:
 
-> ⚠️ When using `Promise.all()` the asynchronous functions are not executed in the same order of the initial array. If you have asynchronous functions which need to run in an **exact** sequence (ae. update a record after a creation) you must use `forEach()` which will wait for each loop to be complete before continue.
+> ⚠️ When using `Promise.all()` the asynchronous functions are not executed in the same order as the initial array. If you have asynchronous functions which need to run in an **exact** sequence (ae. update a record after a creation) you must use `forEach()` which will wait for each loop to be complete before continuing.
 
-> ⚠️ Even though the asynchronous functions are executed in a random order the output results array will preserve the same order of the initial array.
+> ⚠️ Even though the asynchronous functions are executed in random order the output results array will preserve the same order as the initial array.
 
 ```typescript
 const membersName = ["Antonio", "Ernesto", "Federico"];
 
 const membersAge = await Promise.all(
-  members.map(async (memberName) => {
-    const age = await getAgeFromDbWhereNameIs(memberName);
+	members.map(async (memberName) => {
+		const age = await getAgeFromDbWhereNameIs(memberName);
 
-    return age;
-  })
+		return age;
+	})
 );
 
 // Wait untill Promise is fullfilled
@@ -119,29 +119,29 @@ const membersAge = await Promise.all(
 
 > 📄 [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
 
-This method can be used to check wether all elements inside an array fullfill a specific requirement.
-This method is the only one which does not return an array whereas a boolean.
+This method can be used to check whether all elements inside an array fulfill a specific requirement.
+This method is the only one that does not return an array whereas a boolean.
 
 > 👨‍🏫 You want to filter an array and detect which items for a specific order are in stock and ready for shipment.
 
 ```typescript
 const order = [
-  {
-    name: "Tea Shirt",
-    availableStock: 10,
-  },
-  {
-    name: "Jeans",
-    availableStock: 0,
-  },
-  {
-    name: "Filp Flops",
-    availableStock: 3,
-  },
+	{
+		name: "Tea Shirt",
+		availableStock: 10,
+	},
+	{
+		name: "Jeans",
+		availableStock: 0,
+	},
+	{
+		name: "Filp Flops",
+		availableStock: 3,
+	},
 ];
 
 const isOrderReadyForShipment = order.every(
-  (product) => product.availableStock > 0
+	(product) => product.availableStock > 0
 );
 
 // expected:
@@ -152,29 +152,29 @@ const isOrderReadyForShipment = order.every(
 
 > 📄 [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 
-This method can be used to find the **first** element which match a condition.
+This method can be used to find the **first** element which matches a condition.
 
-> ⚠️ This method will only return THE FIRST matching element, if there is more than one element which match the condition it will be ignored.
+> ⚠️ This method will only return THE FIRST matching element, if there is more than one element that matches the condition it will be ignored.
 
 > 👨‍🏫 You have a list of posts and want to get the **first** matching the tag **yes**.
 
 ```typescript
 const posts = [
-  {
-    title: "How to open your mind using a knife",
-    author: "Ernesto",
-    tag: "yes",
-  },
-  {
-    title: "Let your dog do wathever he wants",
-    author: "Federico",
-    tag: "no",
-  },
-  {
-    title: "How to escape from a glass cage",
-    author: "Ernesto",
-    tag: "yes",
-  },
+	{
+		title: "How to open your mind using a knife",
+		author: "Ernesto",
+		tag: "yes",
+	},
+	{
+		title: "Let your dog do wathever he wants",
+		author: "Federico",
+		tag: "no",
+	},
+	{
+		title: "How to escape from a glass cage",
+		author: "Ernesto",
+		tag: "yes",
+	},
 ];
 
 const yesPost = posts.find((post) => post.tag === "yes");
@@ -193,7 +193,7 @@ const yesPost = posts.find((post) => post.tag === "yes");
 
 > 📄 [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
-Now that you are a `find` expert we can bring it to the nex level. The `filter` method works the same as `find` but it returns all matching values instead.
+Now that you are a `find` expert we can bring it to the next level. The `filter` method works the same as `find` but it returns all matching values instead.
 
 It can be used for a couple of things such as...
 
@@ -203,21 +203,21 @@ It can be used for a couple of things such as...
 
 ```typescript
 const posts = [
-  {
-    title: "How to open your mind using a knife",
-    author: "Ernesto",
-    tag: "yes",
-  },
-  {
-    title: "Let your dog do wathever he wants",
-    author: "Federico",
-    tag: "no",
-  },
-  {
-    title: "How to escape from a glass cage",
-    author: "Ernesto",
-    tag: "yes",
-  },
+	{
+		title: "How to open your mind using a knife",
+		author: "Ernesto",
+		tag: "yes",
+	},
+	{
+		title: "Let your dog do wathever he wants",
+		author: "Federico",
+		tag: "no",
+	},
+	{
+		title: "How to escape from a glass cage",
+		author: "Ernesto",
+		tag: "yes",
+	},
 ];
 
 const yesPosts = posts.filter((post) => post.tag === "yes");
@@ -241,16 +241,7 @@ const yesPosts = posts.filter((post) => post.tag === "yes");
 
 ### Clean an array from unwanted/falsy values
 
-```typescript
-const array = [null, undefined, false, "hello", null, -1, "world"];
-
-const arrayWithoutFalsyValues = array.filter((item) => !!item);
-
-// expected:
-// arrayWithoutFalsyValues: hello, world
-```
-
-When wokring with React you might have notced that when using classes to style `is-active` state sometimes you get dirty class names:
+When working with React you might have noticed that when using classes to style an `is-active` state sometimes you get dirty class names:
 
 - `" undefined"`;
 - `"false null another-class-name"`.
@@ -264,7 +255,7 @@ return <div className={[active && "is-active", "round-borders"].join(" ")} />;
 // expected <div class="false round-borders">
 
 const css = (...classNames: (string | undefined | null | false)[]) =>
-  classNames.filter((className) => !className).join(" ");
+	classNames.filter((className) => !className).join(" ");
 
 return <div className={css(active && "is-active", "round-borders")} />;
 // expected <div class="round-borders">
@@ -274,14 +265,12 @@ return <div className={css(active && "is-active", "round-borders")} />;
 
 > 📄 [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
-With the `sort` method things are getting complicated.
-You have an array with 3 numbers `[3, 18, 7, 18]` which needs to be sorted in ASCending order.
+You have an array with 3 numbers `[3, 18, 7, 18`]` which need to be sorted in "ASCending" order.
+The sort method compares values two by two and depending on the value obtained subtracting one from another decide whether:
 
-Sort method compare values two by two and depending on the value obtained subtracting one from another decide wether:
-
-- (3 - 18) = -15 which is `< 0` which means keep 3 before 18 => new sequence `[3, 18, 7, 18]`;
-- (18 - 7) = +11 which is `> 0` which means exchange 18 with 7 => new sequence `[3, 7, 18, 18]`;
-- (18 - 18) = 0 which is `= 0` which means keep the same order => new sequence `[3, 7, 18, 18]`.
+- `< 0` (3 - 18) = -15 which means keep 3 before 18 => new order `[3, 18, 7, 18]`;
+- `> 0` (18 - 7) = +11 which means exchange 18 with 7 => new order `[3, 7, 18, 18]`;
+- `= 0` (18 - 18) = 0 which means keep the same order => new order `[3, 7, 18, 18]`.
 
 ```typescript
 const numbers = [3, 18, 7];
@@ -298,9 +287,9 @@ The same method works with any kind of data:
 
 ```typescript
 const events = [
-  { name: "Social pic-nic", date: "12/11/2022" },
-  { name: "Karate Lesson", date: "3/8/2022" },
-  { name: "Pay Rent", date: "23/12/2022" },
+	{ name: "Social pic-nic", date: "12/11/2022" },
+	{ name: "Karate Lesson", date: "3/8/2022" },
+	{ name: "Pay Rent", date: "23/12/2022" },
 ];
 
 const sortedEvents = events.sort((current, next) => current.date > next.date);
@@ -325,40 +314,40 @@ const sortedWords = events.sort((current, next) => current > next);
 > 📄 [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 
 Reduce is so far the most complex but the most versatile method.
-That said it can be used to run a function trough every element of the array.
+That said it can be used to run a function through every element of the array.
 
-### Get the sum of a specific item key value inside an array
+### Get the sum of a specific item key value inside an array
 
 > 👨‍🏫 Calculate the subtotal of all items inside a cart.
 
 ```typescript
 const cart = [
-  {
-    name: "T-shirt",
-    qty: 1,
-    price: 10000,
-  },
-  {
-    name: "Hat",
-    qty: 2,
-    price: 20000,
-  },
-  {
-    name: "T-shirt",
-    qty: 1,
-    price: 15000,
-  },
+	{
+		name: "T-shirt",
+		qty: 1,
+		price: 10000,
+	},
+	{
+		name: "Hat",
+		qty: 2,
+		price: 20000,
+	},
+	{
+		name: "T-shirt",
+		qty: 1,
+		price: 15000,
+	},
 ];
 
 const cartSubtotal = cart.reduce((cartSubtotal, item) => {
-  const itemSubtotal = item.qty * item.price;
-  return cartSubtotal + itemSubbtotal;
+	const itemSubtotal = item.qty * item.price;
+	return cartSubtotal + itemSubbtotal;
 }, 0);
 ```
 
 ### Manipulate data inside objects
 
-In combination with `Object.keys()` the `reduce` method can be used to loop trough javascript obbjects and manipulate their data.
+In combination with `Object.keys()` the `reduce` method can be used to loop through javascript objects and manipulate their data.
 
 > 👨‍🏫 Create two functions to remove or add given quantities of items from a cart.
 
@@ -400,12 +389,12 @@ const removeFromCart = (uniqueCode: string, qty: number | undefined = 1) =>{
 
 ## The spread operator
 
-Even tough spread operator it is not directly realated to array methods, rather than to all generic iterable objects, I thought it would have been useful to mention it in this compendium.
+Even though the spread operator is not directly related to array methods, rather than to all generic iterable objects, I thought it would have been useful to mention it in this compendium.
 
 ### Add elements to an array
 
-The `...` spread operator basically means: repeat the items of an array (or the object keypairs) inside a new iterable object.
-This allow us to clone an array inside another one while we add new items in between.
+The `...` spread operator means: repeating the items of an array (or the object keypairs) inside a new iterable object.
+This allows us to clone an array inside another one while we add new items in between.
 
 ```typescript
 const lunchbbox = ["apple", "banana"];
@@ -419,9 +408,9 @@ const backpack = ["tablet", ...lunchBox, "laptop", ...pencilCase];
 
 > 👨‍🏫 If we need to create one function to **add** items from an array we will use the `...` spread operator whereas we will use a `filter` method to **remove** them.
 
-### Override a default confguration
+### Override a default configuration
 
-When you create a slider you probably set some default options (such as animation speed, transition type ...) which can be override from annother developer in order to costumize it.
+When you create a slider you probably set some default options (such as animation speed, and transition type ...) which can be overridden by another developer to customize it.
 
 ```typescript
 interface SliderConfig {
@@ -453,27 +442,27 @@ const sliderConfig = applyUserConfig({
  * }
 ```
 
-### Repeat arguments of concatenadted complex functions
+### Repeat arguments of concatenated complex functions
 
-This is a complex and probably uncommon case but it can be usefull to store it somewhere in your mind when difficult times will come.
+This is a complex and probably uncommon case but it can be useful to store it somewhere in your mind when difficult times will come.
 
-Spread operator can be used to spread function arguments with a function which accepts a subset of given args. Its only need is to make the code more readable BUT it will require more attention because it reduce how freely you can edit and change the structure of your functions...as I said _store it somewhere in your mind when difficult times will come_.
+The spread operator can be used to spread function arguments with a function that accepts a subset of given args. Its only need is to make the code more readable BUT it will require more attention because it reduces how freely you can edit and change the structure of your functions...as I said _store it somewhere in your mind when difficult times will come_.
 
 ```typescript
 const createAChocolateEgg = (
-  height: number,
-  width: number,
-  chocolateType: string
+	height: number,
+	width: number,
+	chocolateType: string
 ) => {
-  return `A ${chocolateType} chocolate egg, height: ${height}, width: ${width}`;
+	return `A ${chocolateType} chocolate egg, height: ${height}, width: ${width}`;
 };
 
 const createADecoratedChocolateEgg = (
-  color: string,
-  ...chocolateEggArgs: [number, number, string]
+	color: string,
+	...chocolateEggArgs: [number, number, string]
 ) => {
-  return `${createAChocolateEgg(
-    ...chocolateEggArgs
-  )} whith ${color} sprinkles on it.`;
+	return `${createAChocolateEgg(
+		...chocolateEggArgs
+	)} whith ${color} sprinkles on it.`;
 };
 ```
