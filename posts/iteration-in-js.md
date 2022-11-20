@@ -1,12 +1,12 @@
 ---
 title: Array iteration examples
-description: 'How to handle data using map, every, find, filter, reduce, sort, every with real examples'
-tags: ''
-cover_image: ''
+description: "How to handle data using map, every, find, filter, reduce, sort, every with real examples"
+tags: ""
+cover_image: ""
 canonical_url: null
 published: true
 id: 1264754
-date: '2022-11-20T18:52:24Z'
+date: "2022-11-20T18:52:24Z"
 ---
 
 This article tries to examine different real-life use cases which can be solved with `Array` methods.
@@ -389,6 +389,8 @@ const removeFromCart = (uniqueCode: string, qty: number | undefined = 1) =>{
 ```
 
 ## The spread operator
+
+> 📄 [MDN Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
 
 Even though the spread operator is not directly related to array methods, rather than to all generic iterable objects, I thought it would have been useful to mention it in this compendium.
 
