@@ -1,10 +1,11 @@
 ---
 title: Array iteration examples
-description: How to handle data using map, every, find, filter, reduce, sort, every with real examples
-tags: ""
-cover_image: ""
+description: 'How to handle data using map, every, find, filter, reduce, sort, every with real examples'
+tags: ''
+cover_image: ''
 canonical_url: null
 published: false
+id: 1264754
 ---
 
 This article tries to examine different real-life use cases which can be solved with `Array` methods.
